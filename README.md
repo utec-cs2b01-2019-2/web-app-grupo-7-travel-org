@@ -4,7 +4,7 @@
 
 ## Integrantes
 
-|   | No. Alumno | Apellidos | Nombre | Usuario Github | % participación |
+|  No. Alumno | Apellidos | Nombre | Usuario Github | % participación |
 | --- | --- | --- | --- | --- | --- |
 |  1 |  Roizman Gheiler|  Maor|  mrg2000|  |  |
 |  2 | Sanchez Barreto | Angelica | angelicasanchezbarreto |  |  |
