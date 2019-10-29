@@ -6,6 +6,7 @@
 
 |   | No. Alumno | Apellidos | Nombre | Usuario Github | % participación |
 | --- | --- | --- | --- | --- | --- |
-|  1 |  |  |  |  |  |
-|  2 |  |  |  |  |  |
-|  3 |  |  |  |  |  |
+|  1 |  Roizman Gheiler|  Maor|  mrg2000|  |  |
+|  2 | Sanchez Barreto | Angelica | angelicasanchezbarreto |  |  |
+|  3 | Harmsen | Jeronimo | harmsen97 |  |  |
+|  4 | Ezeta |  Carlos| carlosel678 |  |  |
