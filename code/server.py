@@ -272,25 +272,36 @@ def get_experiencias_viajero(id_viajero):
 @app.route('/authenticate', methods = ['POST'])
 def authenticate():
     #Get data form request
-    time.sleep(3)
+    #time.sleep(3)
     message = json.loads(request.data)
-    username = message['username']
-    password = message['password']
+    username = message['usuario']
+    password = message['contrasena']
 
     # Look in database
     db_session = db.getSession(engine)
 
     try:
-        user = db_session.query(entities.User
-            ).filter(entities.User.username==username
-            ).filter(entities.User.password==password
+        user = db_session.query(entities.Viajero
+            ).filter(entities.Viajero.usuario==username
+            ).filter(entities.Viajero.contrasena==password
             ).one()
         session['logged_user'] = user.id
-        message = {'message':'Authorized'}
-        return Response(message, status=200,mimetype='application/json')
+        message = {'message':'Authorized','user_id':viajero.id,'username':viajero.username}
+        return Response(json.dumps(message), status=200,mimetype='application/json')
     except Exception:
         message = {'message':'Unauthorized'}
-        return Response(message, status=401,mimetype='application/json')
+        return Response(json.dumps(message), status=401,mimetype='application/json')
+
+@app.route('/usuarios', methods=['GET'])
+def todos_los_usuarios():
+    db_session = db.getSession(engine)
+    users = db_session.query(entities.User)
+    response = ""
+    for user in users:
+        response += " "+user.username + " - " +user.password
+
+    return response
+
 
 
 @app.route('/current', methods = ['GET'])
